@@ -1,13 +1,14 @@
 html, body {
   height: 100vh;
-  background-image: linear-gradient(270deg, #dc8bdf, #6858be, #006891);
+  background: #0ebeb0;
+  /* background-image: linear-gradient(270deg, #dc8bdf, #6858be, #006891); */
   /* background: #101010; */
   overflow: hidden;
 }
 
 body {
   background-color: transparent;
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +17,9 @@ body {
 
 #app {
   background: #7928aa;
+  background-image: linear-gradient(-270deg, #6858be, #7928aa, #7928aa);
   color: #fff;
   width: 100%;
-  max-width: 1500px;
-  border-radius: 10px;
   box-shadow: 0 2px 25px -1px #000;
   height: 100%;
   display: flex;
@@ -32,11 +32,13 @@ body {
 
 .caixa {
   overflow: auto;
-  padding: 10px 20px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .titulo {
@@ -48,8 +50,10 @@ body {
 }
 
 .subTitulo {
-  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  color: #27e7d7;
+  font-family: "Playpen Sans", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .oQueEToxoplasmose {
@@ -116,6 +120,34 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.texto-azul {
+  color: #27e7d7;
+  font-family: "Playpen Sans", cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.blocoGato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gato1 {
+  width: 150px;
+  height: 91px;
+  rotate: -90deg;
+  margin-right: -43px;
+  z-index: 2;
+}
+
+.gato2 {
+  width: 150px;
+  height: 91px;
+  rotate: 90deg;
+  margin-left: -43px;
+  z-index: 2;
+}
+
 @media (max-width: 991px) {
   .z-lg-1 {
     z-index: 1 !important;
@@ -125,6 +157,29 @@ body {
 @media (max-width: 768px) {
   body {
     padding: 0px;
+  }
+  #app {
+    border-radius: 0px;
+  }
+  
+  .gato1 {
+    position: absolute;
+    top: 50px;
+    left: -60px;
+  }
+  
+  .gato2 {
+    position: absolute;
+    top: 50px;
+    right: -50px;
+  }
+
+  .gatoNaEsquerda {
+    margin-left: 45px;
+  }
+
+  .gatoNaDireita {
+    margin-right: 55px;
   }
 
   .oQueEToxoplasmose {
